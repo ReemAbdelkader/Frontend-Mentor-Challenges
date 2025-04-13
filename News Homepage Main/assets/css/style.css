@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(0, 0%, 100%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    transition: filter 0.3s;
+}
+
+/* General Styles */
+
+.main .container .btn-main a {
+    background-color: var(--Soft-red);
+    letter-spacing: 0.4em;
+    word-spacing: 0.8em;
+    padding: 15px;
+    color: var(--Very-dark-blue);
+}
+
+.main .container .btn-main a:hover {
+    background-color: var(--Very-dark-blue);
+    color: var(--Off-white);
+}
+
+.main .container .row .right {
+    background-color: var(--Very-dark-blue);
+    padding: 12px;
+}
+
+.main .container .row .right .texts {
+    color: var(--Soft-orange);
+}
+
+.main .container .row .right .two {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.329);
+    margin-bottom: 1rem;
+}
+
+.main .container .row .content h2 {
+    color: var(--Soft-red);
+}
+.main .container .row .content h4:hover {
+    color: var(--Soft-red);
+}
+
+/* Icons Styles */
+/* أيقونات القائمة */
+.icon-menu, 
+.icon-close {
+    top: 50px;
+    right: 20px;
+    width: 40px;
+    height: 28px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001; 
+    background: none;
+    border: none;
+    display: none;
+}
+
+/* icon-close only disappear in small view (mobile) */
+@media (max-width: 559px) {
+    .icon-menu {
+        display: block;
+    }
+}
+
+.icon-close {
+    display: none;
+    right: 40px; 
+    height: 30px;
+    width: 30px;
+    margin: 0; 
+    padding: 0;
+}
+
+/* Navigation Styles */
+
+
+.nav ul {
+    list-style-type: none;
+}
+
+.nav ul:hover {
+    color: var(--Soft-red);
+}
+
+.nav.active {
+    display: block;
+    margin-top: 3rem;
+}
+
+.main .container .row .right {
+    background-color: var(--Very-dark-blue);
+}
+.main .container .row .right .texts{
+    color: var(--Soft-orange);
+}
+.main .container .row .right .two{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.329);
+}
+.main .container .row .row .half .text-h {
+    font-size: 70px;
+    color: var(--Very-dark-blue);
+}
+.main .container .row .right {
+    padding: 12px;
+}
+
+/* Overlay Styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(1px);
+    z-index: 998;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.main .container .row .the-paragraph {
+    font-size: 15px;
+    margin-bottom: 3rem;
+}
+
+
+/* Responsive Styles */
+
+@media (min-width: 560px) {
+    .icon-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 559px) {
+    .nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background: white;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav.active {
+        right: 0;
+        padding-top: 12rem;
+    }
+
+    .icon-menu {
+        display: block;
+    }
+
+    .nav.active + .icon-close {
+        display: block;
+    }
+
+    .menu img {
+        margin-left: 8px;
+        top: 4rem;
+    }
+
+    .main .container .row .row .half .text-h  {
+        font-size: 30px;
+    }
+
+    .main .container p {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .main .container p {
+        margin-top: 5px;
+    }
+
+    .main .container .logo {
+        width: 100%;
+        height: auto;
+    }
+    .main .container .btn-main {
+        display: block;
+    }
+    .main .container .row .image{
+        height: 158px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .nav {
+        flex-wrap: nowrap;
+    }
+
+    .main .container .row .row .half .text-h  {
+        font-size: 40px;
+    }
+
+    .main .container p {
+        margin-top: 5px;
+    }
+
+    .main .container .logo {
+        width: 100%;
+        height: auto;
+    }
+
+    .main .container .row .right {
+        padding: 10px;
+    }
+}

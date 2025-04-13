@@ -2,6 +2,9 @@
 
 A responsive news homepage featuring the latest trends in Web 3.0, AI, and technology. Built as a Frontend Mentor challenge.
 
+## Live Demo
+[![Vercel](https://newshomepagemain.vercel.app/)]
+
 ## Features
 
 - ✅ **Mobile-first responsive design**
